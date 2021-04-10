@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import SpotifyPlayer from 'react-spotify-player';
+import SpotifyPlayer from './SpotifyPlayer.js';
+// import SpotifyPlayer2 from 'react-spotify-web-playback';
+
 
 const MusicOnly = (props) => {
     const [ album, setAlbum ] = useState("spotify:album:1TIUsv8qmYLpBEhvmBmyBk")
@@ -22,6 +24,10 @@ const MusicOnly = (props) => {
         view={view}
         theme={theme}
         />
+        {/* <SpotifyPlayer2
+        token="3620e161c19749428f372e49f4759244"
+        uris={['spotify:artist:6HQYnRM4OzToCYPpVBInuU']}
+        />; */}
     </div>
     )
 }
