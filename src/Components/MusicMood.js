@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Dropdown from './Dropdown';
 import Listbox from './Listbox';
-import Detail from './Detail';
 import { Credentials } from './Credentials';
 import axios from 'axios';
 import SpotifyPlayer from './SpotifyPlayer.js';
@@ -134,16 +133,19 @@ const MusicMood = () => {
               Search
             </button>
           </div>
-          <div className="row">
-            <Listbox items={tracks.listOfTracksFromAPI} clicked={listboxClicked} />
-
-            <SpotifyPlayer
-              uri={trackuri}
-              size={size}
-              view={view}
-              theme={theme}
-            />
-            {trackDetail && <Detail {...trackDetail} /> }
+          <div class="container-fluid">
+            <div className="row">
+              <div className="col-sm-6 px-0">
+              <SpotifyPlayer
+                uri={trackuri}
+                size={size}
+                view={view}
+                theme={theme}
+              />
+              </div>
+              <Listbox items={tracks.listOfTracksFromAPI} clicked={listboxClicked} />
+            
+            </div>
           </div>        
       </form>
     </div>
