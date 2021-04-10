@@ -1,9 +1,10 @@
-import logo from './download.jpeg';
+// import logo from './download.jpeg';
 import './App.css';
 import MainButtons from './Components/MainButtons'
 import SelectMusic from './Components/SelectMusic'
-import MusicOnly from './Components/MusicOnly'
+// import MusicOnly from './Components/MusicOnly'
 import MusicMood from './Components/MusicMood'
+import Menu from './Components/Menu'
 import PomodoroMusic from './Components/PomodoroMusic'
 import { useState } from 'react';
 import {
@@ -18,32 +19,30 @@ function App() {
   const [showButton, setShowButton] = useState(true)
   return (
     <div className="App">
-      <header className="App-header">
-        <Router>
-          <li>
-            <Link to="/Main">Main Buttons</Link>
-          </li>
 
-          <Switch>
-            <Route path="/Main">
-              <MainButtons/>
-            </Route>
+      <Router >
+        <Menu />
+        
 
-            <Route path="/SelectMusic">
-              <SelectMusic/>
-            </Route>
+        <Switch>
+          <Route path="/Main">
+            <MainButtons/>
+          </Route>
 
-            <Route path="/PomodoroMusic">
-              <PomodoroMusic/>
-            </Route>
+          <Route path="/SelectMusic">
+            <SelectMusic/>
+          </Route>
 
-            <Route path="/Music">
-              <MusicMood/>
-            </Route>
-          </Switch>
-        </Router>
+          <Route path="/PomodoroMusic">
+            <PomodoroMusic/>
+          </Route>
+
+          <Route path="/Music">
+            <MusicMood/>
+          </Route>
+        </Switch>
+      </Router>
           
-      </header>
     </div>
   );
 }

@@ -47,6 +47,7 @@ const MusicMood = () => {
       method: 'POST'
     })
     .then(tokenResponse => {      
+      console.log(tokenResponse);
       setToken(tokenResponse.data.access_token);
 
       axios('https://api.spotify.com/v1/browse/categories?locale=sv_US', {
@@ -81,11 +82,9 @@ const MusicMood = () => {
       })
     });
 
-    console.log(val);
   }
 
   const playlistChanged = val => {
-    console.log(val);
     setPlaylist({
       selectedPlaylist: val,
       listOfPlaylistFromAPI: playlist.listOfPlaylistFromAPI
@@ -102,7 +101,6 @@ const MusicMood = () => {
       }
     })
     .then(tracksResponse => {
-      console.log(tracksResponse);
       setTracks({
         selectedTrack: tracks.selectedTrack,
         listOfTracksFromAPI: tracksResponse.data.items
@@ -120,7 +118,6 @@ const MusicMood = () => {
 
     setTrackuri(trackInfo[0].track.uri);
 
-    console.log(trackInfo[0].track.id);
   }
   
 
