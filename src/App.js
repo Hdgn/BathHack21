@@ -3,6 +3,7 @@ import './App.css';
 import MainButtons from './Components/MainButtons'
 import SelectMusic from './Components/SelectMusic'
 import MusicOnly from './Components/MusicOnly'
+import MusicMood from './Components/MusicMood'
 import PomodoroMusic from './Components/PomodoroMusic'
 import { useState } from 'react';
 import {
@@ -37,7 +38,7 @@ function App() {
             </Route>
 
             <Route path="/Music">
-              <MusicOnly/>
+              <MusicMood/>
             </Route>
           </Switch>
         </Router>
