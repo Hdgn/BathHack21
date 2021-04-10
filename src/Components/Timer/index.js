@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { HotKeys } from 'react-hotkeys'
 import TitleComponent from './TitleComponent'
 import Alarm from './Alarm'
 import TimerTypes from './TimerTypes'
