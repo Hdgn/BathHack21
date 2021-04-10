@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Dropdown from './Dropdown';
 import Listbox from './Listbox';
-import Detail from './Detail';
 import { Credentials } from './Credentials';
 import axios from 'axios';
 import SpotifyPlayer from './SpotifyPlayer.js';
@@ -47,6 +46,7 @@ const MusicMood = () => {
       method: 'POST'
     })
     .then(tokenResponse => {      
+      console.log(tokenResponse);
       setToken(tokenResponse.data.access_token);
 
       axios('https://api.spotify.com/v1/browse/categories?locale=sv_US', {
@@ -81,11 +81,9 @@ const MusicMood = () => {
       })
     });
 
-    console.log(val);
   }
 
   const playlistChanged = val => {
-    console.log(val);
     setPlaylist({
       selectedPlaylist: val,
       listOfPlaylistFromAPI: playlist.listOfPlaylistFromAPI
@@ -102,7 +100,6 @@ const MusicMood = () => {
       }
     })
     .then(tracksResponse => {
-      console.log(tracksResponse);
       setTracks({
         selectedTrack: tracks.selectedTrack,
         listOfTracksFromAPI: tracksResponse.data.items
@@ -120,7 +117,6 @@ const MusicMood = () => {
 
     setTrackuri(trackInfo[0].track.uri);
 
-    console.log(trackInfo[0].track.id);
   }
   
 
@@ -134,16 +130,19 @@ const MusicMood = () => {
               Search
             </button>
           </div>
-          <div className="row">
-            <Listbox items={tracks.listOfTracksFromAPI} clicked={listboxClicked} />
-
-            <SpotifyPlayer
-              uri={trackuri}
-              size={size}
-              view={view}
-              theme={theme}
-            />
-            {trackDetail && <Detail {...trackDetail} /> }
+          <div class="container-fluid">
+            <div className="row">
+              <div className="col-sm-6 px-0">
+              <SpotifyPlayer
+                uri={trackuri}
+                size={size}
+                view={view}
+                theme={theme}
+              />
+              </div>
+              <Listbox items={tracks.listOfTracksFromAPI} clicked={listboxClicked} />
+            
+            </div>
           </div>        
       </form>
     </div>
