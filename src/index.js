@@ -10,6 +10,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'semantic-ui-css/semantic.min.css'
 import {Header, Button} from "semantic-ui-react";
 import pkg from 'semantic-ui-react/package.json'
+import { Icon, Modal } from 'semantic-ui-react'
+import { Form } from 'semantic-ui-react'
 
 ReactDOM.render(
   <React.StrictMode>

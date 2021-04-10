@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Header } from 'semantic-ui-react'
 import Timer from './Timer'
+import Details from './Modal/Details'
 
 const PomodoroMusic = (props) => {
   const [showTimerIndicator, setShowTimerIndicator] = useState((localStorage.getItem('showTimerIndicator')) ? localStorage.getItem('showTimerIndicator')==='true' : true)
@@ -27,11 +28,36 @@ const PomodoroMusic = (props) => {
     "setIsRinging": setIsRinging
   }
 
-
+    const modalProps = {
+    "settingsProps" : {
+    "pomodoro":pomodoro,
+    "shortBreak": shortBreak,
+    "longBreak":longBreak,
+    "setPomodoro":setPomodoro,
+    "setShortBreak": setShortBreak,
+    "setLongBreak": setLongBreak,
+    "showTimerIndicator": showTimerIndicator,
+    "setShowTimerIndicator": setShowTimerIndicator,
+    "ringerType": ringerType,
+    "setRingerType": setRingerType,
+    "ringerVolume": ringerVolume,
+    "setRingerVolume": setRingerVolume,
+    "pomodoroGoal": pomodoroGoal,
+    "setPomodoroGoal": setPomodoroGoal,
+    "notification": notification,
+    "setNotification": setNotification,
+    "setIsRinging": setIsRinging
+    },
+    "logProps": {
+      "setCurrentTimerLog": setCurrentTimerLog,
+      "pomodoroGoal": pomodoroGoal
+    }
+    }
 
     return (
     <div>
         <Timer {...timerProps}/>
+        <Details {...modalProps} />
     </div>
     )
 }
