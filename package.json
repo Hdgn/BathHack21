@@ -12,20 +12,14 @@
     "popper.js": "^1.16.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-<<<<<<< HEAD
     "react-popper": "^2.2.5",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-spotify-player": "^1.0.4",
     "react-spotify-web-playback": "^0.8.1",
-=======
     "react-helmet": "^6.1.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "react-spotify-player": "^1.0.4",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.3",
->>>>>>> fd5e65780a769b91b26c9ebe79463d22f297f5c1
     "web-vitals": "^1.1.1"
   },
   "scripts": {
