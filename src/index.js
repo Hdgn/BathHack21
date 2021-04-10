@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'semantic-ui-css/semantic.min.css'
+import {Header, Button} from "semantic-ui-react";
+import pkg from 'semantic-ui-react/package.json'
 
 ReactDOM.render(
   <React.StrictMode>
