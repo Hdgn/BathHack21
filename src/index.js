@@ -3,6 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+<<<<<<< HEAD
+import 'bootstrap/dist/css/bootstrap.min.css';
+//import $ from 'jquery';
+//import Popper from 'popper.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+=======
+import 'semantic-ui-css/semantic.min.css'
+import {Header, Button} from "semantic-ui-react";
+import pkg from 'semantic-ui-react/package.json'
+>>>>>>> fd5e65780a769b91b26c9ebe79463d22f297f5c1
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,9 +1,9 @@
 import React from 'react'
-import EightiesAlarm from '../../static/sounds/EightiesAlarm.wav'
-import AlarmClock from '../../static/sounds/AlarmClock.wav'
-import WristwatchAlarm from '../../static/sounds/WristwatchAlarm.wav'
-import ElevatorDing from '../../static/sounds/ElevatorDing.wav'
-import DoorBell from '../../static/sounds/DoorBell.wav'
+import EightiesAlarm from '../../sounds/AlarmClock.wav'
+import AlarmClock from '../../sounds/AlarmClock.wav'
+import WristwatchAlarm from '../../sounds/AlarmClock.wav'
+import ElevatorDing from '../../sounds/AlarmClock.wav'
+import DoorBell from '../../sounds/AlarmClock.wav'
 
 const Alarm = (props) => {
 

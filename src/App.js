@@ -38,7 +38,7 @@ function App() {
             </Route>
 
             <Route path="/Music">
-              <MusicMood/>
+              <MusicOnly/>
             </Route>
           </Switch>
         </Router>

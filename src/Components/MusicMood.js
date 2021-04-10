@@ -4,12 +4,21 @@ import Listbox from './Listbox';
 import Detail from './Detail';
 import { Credentials } from './Credentials';
 import axios from 'axios';
+import SpotifyPlayer from './SpotifyPlayer.js';
+
 
 //Using code from AveryWicks https://www.youtube.com/watch?v=fVcz-1rVQcs
 
 const MusicMood = () => {
 
   const spotify = Credentials();  
+
+  const size = {
+    width: '100%',
+    height: 300,
+  };
+  const view = 'list'; // or 'coverart'
+  const theme = 'black'; // or 'white'
 
   console.log('RENDERING APP.JS');
 
@@ -24,6 +33,8 @@ const MusicMood = () => {
   const [playlist, setPlaylist] = useState({selectedPlaylist: '', listOfPlaylistFromAPI: []});
   const [tracks, setTracks] = useState({selectedTrack: '', listOfTracksFromAPI: []});
   const [trackDetail, setTrackDetail] = useState(null);
+  const [ trackuri, setTrackuri ] = useState("spotify:album:1TIUsv8qmYLpBEhvmBmyBk")
+
 
   useEffect(() => {
 
@@ -91,6 +102,7 @@ const MusicMood = () => {
       }
     })
     .then(tracksResponse => {
+      console.log(tracksResponse);
       setTracks({
         selectedTrack: tracks.selectedTrack,
         listOfTracksFromAPI: tracksResponse.data.items
@@ -106,8 +118,9 @@ const MusicMood = () => {
 
     setTrackDetail(trackInfo[0].track);
 
+    setTrackuri(trackInfo[0].track.uri);
 
-
+    console.log(trackInfo[0].track.id);
   }
   
 
@@ -123,6 +136,13 @@ const MusicMood = () => {
           </div>
           <div className="row">
             <Listbox items={tracks.listOfTracksFromAPI} clicked={listboxClicked} />
+
+            <SpotifyPlayer
+              uri={trackuri}
+              size={size}
+              view={view}
+              theme={theme}
+            />
             {trackDetail && <Detail {...trackDetail} /> }
           </div>        
       </form>
