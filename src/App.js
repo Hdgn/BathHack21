@@ -22,7 +22,6 @@ function App() {
 
       <Router >
         <Menu />
-        
 
         <Switch>
           <Route path="/Main">
