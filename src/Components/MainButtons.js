@@ -12,6 +12,7 @@ const MainButtons = (props) => {
                 secondary 
                 width={8} 
                 image= {bunny}
+        
                 link="/PomodoroMusic"
                 text="Feeling Productive"
                 font-size={10}
