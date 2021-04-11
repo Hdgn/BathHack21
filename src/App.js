@@ -20,11 +20,15 @@ function App() {
   return (
     <div className="App">
 
-      <Router >
-        <Menu />
+      <Router>
+        <Menu/>
         
 
         <Switch>
+          <Route exact path="/">
+            <MainButtons/>
+          </Route>
+
           <Route path="/Main">
             <MainButtons/>
           </Route>
