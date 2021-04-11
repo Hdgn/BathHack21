@@ -24,9 +24,9 @@ const Alarm = (props) => {
     case "DoorBell":
     alarmType= DoorBell;
     break;
-    default:
-    alarmType=WristwatchAlarm;
-    break;
+    // default:
+    // alarmType=WristwatchAlarm;
+    // break;
   }
 
 

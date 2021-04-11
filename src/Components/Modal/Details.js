@@ -42,7 +42,7 @@ const Details = (props) => {
     >
       <Modal.Header>Pomodoro Settings</Modal.Header>
       <Modal.Content image scrolling>
-        <Image size='medium' src='https://react.semantic-ui.com/images/wireframe/image.png' wrapped />
+        <Image size='medium' src='public/bird.png' wrapped />
 
         <Modal.Description>
           <p>
@@ -52,7 +52,7 @@ const Details = (props) => {
             <Form.Group widths='equal'>
             {/* <Form.Field label='Time' control='input' / > */}
             {/* <Form.Field label='Time' control='input' value={props.pomodoro} onChange={e => onPomodoroChange(e.target.value)} / >  */}
-            {/* <Form.Field label='Pomodoro Goal' control='select' onChange= {}>
+            <Form.Field label='Pomodoro Goal' control='select' value={props.pomodoroGoal} onChange={e => props.setPomodoroGoal(e.target.value)}>
                 <option value='1'>1</option>
                 <option value='2'>2</option>
                 <option value='3'>3</option>
@@ -60,7 +60,7 @@ const Details = (props) => {
                 <option value='5'>5</option>
                 <option value='6'>6</option>
                 <option value='7'>7</option>
-            </Form.Field> */}
+            </Form.Field> 
             <Form.Field label='Pomodoro Time' control='select' value={props.pomodoro} onChange={e => props.setPomodoro(e.target.value)}>
                 <option value='20'>20</option>
                 <option value='25'>25</option>
@@ -71,7 +71,8 @@ const Details = (props) => {
                 <option value='50'>50</option>
             
             </Form.Field>
-            <Form.Field label='Break Time' control='select'>
+            <Form.Field label='Break Time' control='select' value={props.shortBreak} onChange={e => props.setShortBreak(e.target.value)}>
+                <option value='1'>1</option>
                 <option value='5'>5</option>
                 <option value='10'>10</option>
                 <option value='15'>15</option>
@@ -80,13 +81,12 @@ const Details = (props) => {
                 <option value='30'>30</option>
                 
             </Form.Field>
-            <Form.Field label='Ringer Type' control='select'>
-                <option value='1'>Alarm Clock</option>
-                <option value='2'>Bell</option>
-                <option value='3'>Door Bell</option>
-                <option value='4'>Eighties Alarm</option>
-                <option value='5'>Elevator Ding</option>
-                <option value='6'>Wrist Watch Alarm</option>
+            <Form.Field label='Ringer Type' control='select'value={props.ringerType} onChange={e => props.setRingerType(e.target.value)}>
+                <option value='AlarmClock'>Alarm Clock</option>
+                <option value='DoorBell'>Door Bell</option>
+                <option value='80sAlarm'>80sAlarm</option>
+                <option value='ElevatorDing'>Elevator Ding</option>
+                <option value='WristwatchAlarm'>Wrist Watch Alarm</option>
             </Form.Field>
             </Form.Group>
             <Form.Group grouped>
@@ -122,10 +122,10 @@ const Details = (props) => {
       </Modal.Content>
       <Modal.Actions>
         <Button onClick={() => onSave()} primary>
-          Save <Icon name='chevron right' />  
+          Change Default Settings <Icon name='chevron right' />  
           </Button>
         <Button onClick={() => setOpen(false)} primary>
-          Close <Icon name='chevron right' />
+          Proceed <Icon name='chevron right' />
         </Button>
       </Modal.Actions>
     </Modal>
