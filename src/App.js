@@ -7,6 +7,7 @@ import MusicMood from './Components/MusicMood'
 import Menu from './Components/Menu'
 import PomodoroMusic from './Components/PomodoroMusic'
 import { useState } from 'react';
+import Game from './Components/Game/Game'
 import {
   BrowserRouter as Router,
   Switch,
