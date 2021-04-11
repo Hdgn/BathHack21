@@ -15,7 +15,19 @@
   text-align:center;
 }
 
+#times{
+  margin-top:2%;
+  margin-bottom:2%
+}
+#stopwatch{
+  margin-top:2%;
+  margin-bottom:2%
+}
 
+#buttons button{
+  margin-right:1%;
+  margin-left:1%;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
