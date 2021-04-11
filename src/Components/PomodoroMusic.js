@@ -9,14 +9,14 @@ const PomodoroMusic = (props) => {
   const [ringerType, setRingerType] = useState(localStorage.getItem("ringerType") || "DoorBell")
   const [ringerVolume, setRingerVolume] = useState(localStorage.getItem("ringerVolume") || 1)
   const [pomodoro, setPomodoro] = useState(localStorage.getItem("pomodoro") || 25)
-  const [Break, setBreak] = useState(localStorage.getItem("break") || 10)
+  const [shortBreak, setShortBreak] = useState(localStorage.getItem("break") || 10)
   const [pomodoroGoal, setPomodoroGoal] = useState(localStorage.getItem("pomodoroGoal") || 1)
   const [currentTimerLog, setCurrentTimerLog] = useState({})
   const [isRinging, setIsRinging] = useState(false);
 
   const timerProps = {
     "pomodoro":pomodoro,
-    "Break": Break,
+    "shortBreak": shortBreak,
     "showTimerIndicator": showTimerIndicator,
     "ringerType": ringerType,
     "ringerVolume": ringerVolume,
@@ -28,9 +28,9 @@ const PomodoroMusic = (props) => {
 
   const modalProps = {
     "pomodoro":pomodoro,
-    "Break": Break,
+    "shortBreak": shortBreak,
     "setPomodoro":setPomodoro,
-    "setBreak": setBreak,
+    "setShortBreak": setShortBreak,
     "showTimerIndicator": showTimerIndicator,
     "setShowTimerIndicator": setShowTimerIndicator,
     "ringerType": ringerType,
