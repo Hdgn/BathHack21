@@ -40,7 +40,7 @@ function App() {
             <PomodoroMusic/>
           </Route>
 
-          <Route path="/Music">
+          <Route path="/MusicMood">
             <MusicMood/>
           </Route>
         </Switch>
