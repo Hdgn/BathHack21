@@ -10,7 +10,9 @@ const CardButton = (props) => (
         <Card.Content>
           {props.text}
         </Card.Content>
-        <Image src={props.image} rounded size="small" ui={false}/>
+        <Card.Content>
+          <Image src={props.image} rounded size="big" />
+        </Card.Content>
       </Link>
     </Card>
   </Grid.Column>
