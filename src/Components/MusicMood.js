@@ -4,6 +4,7 @@ import Listbox from './Listbox';
 import { Credentials } from './Credentials';
 import axios from 'axios';
 import SpotifyPlayer from './SpotifyPlayer.js';
+import { Container, Button } from 'semantic-ui-react'
 
 
 //Using code from AveryWicks https://www.youtube.com/watch?v=fVcz-1rVQcs
@@ -115,14 +116,19 @@ const MusicMood = () => {
   
 
   return (
-    <div className="container">
-      <form onSubmit={buttonClicked}>        
-          <Dropdown label="Genre :" options={genres.listOfGenresFromAPI} selectedValue={genres.selectedGenre} changed={genreChanged} />
-          <Dropdown label="Playlist :" options={playlist.listOfPlaylistFromAPI} selectedValue={playlist.selectedPlaylist} changed={playlistChanged} />
-          <div className="col-sm-6 row form-group px-0">
-            <button style={{backgroundColor: 'black'}} type='submit' className="btn btn-success col-sm-12">
+    
+    <div className="container" id="container">
+    
+    
+      <form onSubmit={buttonClicked} center>
+        
+          <Dropdown label="Genre:" options={genres.listOfGenresFromAPI} selectedValue={genres.selectedGenre} changed={genreChanged} />
+         
+          <Dropdown label="Playlist:" options={playlist.listOfPlaylistFromAPI} selectedValue={playlist.selectedPlaylist} changed={playlistChanged} />
+          <div className="col-sm-6 row form-group px-0 center">   
+            <Button secondary type='submit' className="btn btn-success col-sm-12">
               Search
-            </button>
+            </Button>
           </div>
           <div class="container-fluid">
             <div className="row">
@@ -139,6 +145,8 @@ const MusicMood = () => {
             </div>
           </div>        
       </form>
+    
+     
     </div>
     
     
