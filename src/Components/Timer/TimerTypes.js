@@ -10,8 +10,8 @@ const TimerTypesComponent = ({ pomodoro, longBreak, shortBreak, timer }) => {
   return (
     <div className="timers" id="times">
       <div className="timer-types">
-        <Button medium primary onClick={pomodoro} className={activeTimer("pomodoro")}>Pomodoro</Button>
-        <Button medium primary onClick={shortBreak} className={activeTimer("shortBreak")}>Break</Button>
+        <Button size="large" primary onClick={pomodoro} className={activeTimer("pomodoro")}>Pomodoro</Button>
+        <Button size="large" primary onClick={shortBreak} className={activeTimer("shortBreak")}>Break</Button>
       </div>
     </div>
   )

@@ -57,6 +57,9 @@ const PomodoroMusic = (props) => {
     return (
     <div>
       <Grid verticalAlign='middle' column={1} centered relaxed padded vertically>
+        <Grid.Row>
+        <Header size='huge'>Try the Pomodoro Timer!</Header>
+        </Grid.Row>
         <Grid.Row relaxed grid>
         <Container textAlign='center'>
         <Timer {...timerProps}/>
@@ -67,6 +70,9 @@ const PomodoroMusic = (props) => {
         </Grid.Row>
         <Grid.Row>
           {(showMessage) ? <Header>Time to take a break and look away!</Header> : <div></div>}
+        </Grid.Row>
+        <Grid.Row>
+        <Header size='large'>Time to take a break and look away!</Header>
         </Grid.Row>
         <Grid.Row>
         <Details {...modalProps} />
