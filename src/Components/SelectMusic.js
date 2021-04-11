@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { Checkbox } from 'semantic-ui-react'
 // import { Timer } from '../Timer';
+import { Button } from 'semantic-ui-react';
 
 
 const SelectMusic = (props) => {
@@ -38,9 +39,9 @@ const SelectMusic = (props) => {
                     <Checkbox toggle onChange={handleECChange} />        
                 </label>
             </form>
-            <button>
+            <Button secondary>
                 <Link to="/PomodoroMusic">Next Page</Link>
-            </button>
+            </Button>
         </div>
     )
 }
