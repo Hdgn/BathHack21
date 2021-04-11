@@ -33,9 +33,6 @@ function App() {
             <MainButtons/>
           </Route>
 
-          <Route path="/SelectMusic">
-            <SelectMusic/>
-          </Route>
 
           <Route path="/PomodoroMusic">
             <PomodoroMusic/>
