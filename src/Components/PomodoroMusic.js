@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Header, Grid } from 'semantic-ui-react'
 import Timer from './Timer'
+import EyeCareTimer from "./EyeTimer"
 import Details from './Modal/Details'
 
 const PomodoroMusic = (props) => {
@@ -9,10 +10,12 @@ const PomodoroMusic = (props) => {
   const [ringerType, setRingerType] = useState(localStorage.getItem("ringerType") || "DoorBell")
   const [ringerVolume, setRingerVolume] = useState(localStorage.getItem("ringerVolume") || 1)
   const [pomodoro, setPomodoro] = useState(localStorage.getItem("pomodoro") || 25)
+  const [eyeCare, setEyeCare] = useState(localStorage.getItem("eyeCare") || 20)
   const [shortBreak, setShortBreak] = useState(localStorage.getItem("break") || 10)
   const [pomodoroGoal, setPomodoroGoal] = useState(localStorage.getItem("pomodoroGoal") || 1)
   const [currentTimerLog, setCurrentTimerLog] = useState({})
   const [isRinging, setIsRinging] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
 
   const timerProps = {
     "pomodoro":pomodoro,
@@ -44,6 +47,11 @@ const PomodoroMusic = (props) => {
     "setIsRinging": setIsRinging
     }
     
+    useEffect(() => {
+      setTimeout(() => {
+        setShowMessage(false)
+      }, 20000);
+    }, [showMessage])
     
 
     return (
@@ -51,6 +59,12 @@ const PomodoroMusic = (props) => {
       <Grid verticalAlign='middle' column={1} centered>
         <Grid.Row>
         <Timer {...timerProps}/>
+        </Grid.Row>
+        <Grid.Row>
+          <EyeCareTimer time={eyeCare} setShowMessage={setShowMessage}/>
+        </Grid.Row>
+        <Grid.Row>
+          {(showMessage) ? <Header>Time to take a break and look away!</Header> : <div></div>}
         </Grid.Row>
         <Grid.Row>
         <Details {...modalProps} />
