@@ -14,6 +14,10 @@ const TimerComponent = (props) => {
   
 
   useEffect(() => {
+    setSeconds(props.pomodoro*60)
+  }, [props.pomodoro])
+
+  useEffect(() => {
     let interval = null;
     if (isActive && seconds !== 0) {
       interval = setInterval(() => {
@@ -116,7 +120,7 @@ const TimerComponent = (props) => {
     setIsActive((isActive) => !isActive)  
   }
 
-  const alarmProps = {
+  const alarmProps = { 
     "isActive": isActive,
     "seconds": seconds,
     "ringerType":props.ringerType,

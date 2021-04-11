@@ -7,7 +7,7 @@ const Details = (props) => {
   const [open, setOpen] = React.useState(false)
   
   const onPomodoroChange = (value) => {
-      console.log()
+      console.log(typeof(value))
     props.setPomodoro(Number(value))
   }
 
@@ -62,7 +62,7 @@ const Details = (props) => {
                 <option value='6'>6</option>
                 <option value='7'>7</option>
             </Form.Field> */}
-            <Form.Field label='Pomodoro Time' control='select' onChange= {e => onPomodoroChange(e.target.value)}>
+            <Form.Field label='Pomodoro Time' control='select' value={props.pomodoro} onChange= {e => props.setPomodoro(e.target.value)}>
                 <option value='20'>20</option>
                 <option value='25'>25</option>
                 <option value='30'>30</option>
