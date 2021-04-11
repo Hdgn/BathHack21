@@ -72,7 +72,7 @@ const PomodoroMusic = (props) => {
           {(showMessage) ? <Header>Time to take a break and look away!</Header> : <div></div>}
         </Grid.Row>
         <Grid.Row>
-        <Header size='large'>Time to take a break and look away!</Header>
+        <Header size='large'>A look away for your eyes reminder!</Header>
         </Grid.Row>
         <Grid.Row>
         <Details {...modalProps} />

@@ -4,6 +4,7 @@ import Alarm from './Alarm'
 import TimerTypes from './TimerTypes'
 import Stopwatch from './Stopwatch'
 import Controls from './Controls'
+import {Header} from 'semantic-ui-react'
 
 const TimerComponent = (props) => {
 
@@ -172,7 +173,7 @@ const TimerComponent = (props) => {
       <TitleComponent title ={titleHandler()} show={props.showTimerIndicator}/>
       <Alarm {...alarmProps}/>
       <TimerTypes pomodoro={pomodoro} shortBreak={shortBreak} longBreak={longBreak} timer={timer}/>
-      <Stopwatch time={timePP()}/>
+      <Header size='huge'><Stopwatch time={timePP()}/></Header>
       <Controls start={start} stop={stop} reset={reset}/>
     </div>
   )

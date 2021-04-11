@@ -2,6 +2,7 @@ import React from 'react'
 import {Header, Grid, Button}  from 'semantic-ui-react'
 
 
+
 const ControlsComponent = ({start, stop, reset}) => {
   return (
     <div className = "buttons" id="buttons">
