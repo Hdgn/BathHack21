@@ -21,8 +21,7 @@ const Details = (props) => {
     localStorage.setItem('ringerType', props.ringerType)
     localStorage.setItem('ringerVolume', props.ringerVolume)
     localStorage.setItem('pomodoro', props.pomodoro)
-    localStorage.setItem('shortBreak', props.shortBreak)
-    localStorage.setItem('longBreak', props.longBreak)
+    localStorage.setItem('break', props.shortBreak)
     localStorage.setItem('pomodoroGoal', props.pomodoroGoal)
   }
 
@@ -62,7 +61,7 @@ const Details = (props) => {
                 <option value='6'>6</option>
                 <option value='7'>7</option>
             </Form.Field> */}
-            <Form.Field label='Pomodoro Time' control='select' value={props.pomodoro} onChange= {e => props.setPomodoro(e.target.value)}>
+            <Form.Field label='Pomodoro Time' control='select' value={props.pomodoro} onChange={e => props.setPomodoro(e.target.value)}>
                 <option value='20'>20</option>
                 <option value='25'>25</option>
                 <option value='30'>30</option>
