@@ -24,6 +24,12 @@ const TimerComponent = (props) => {
         setSeconds(seconds => seconds - 1);
       }, 1000);
     } else if (isActive && seconds === 0){
+      // if (eyeCareCounter === eyeCareCount) {
+      //   setIsActive(false)
+      // } else {
+      //   setSeconds(BacktoOriginalSeconds)
+      //   eycarecounter++
+      // }
       setIsActive(false)
       props.setIsRinging(true)
       props.setCurrentTimerLog({...props.currentTimerLog, "stopTime": new Date(), "id": Math.ceil(Math.random()*100000)})

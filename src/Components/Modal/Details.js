@@ -2,6 +2,7 @@ import React, { useState }from 'react'
 import { Button, Icon, Image, Modal } from 'semantic-ui-react'
 import { Form } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
+import bird from './bird.png'
 
 const Details = (props) => {
   const [open, setOpen] = React.useState(false)
@@ -42,7 +43,7 @@ const Details = (props) => {
     >
       <Modal.Header>Pomodoro Settings</Modal.Header>
       <Modal.Content image scrolling>
-        <Image size='medium' src='public/bird.png' wrapped />
+        <Image size='medium' src={bird} wrapped />
 
         <Modal.Description>
           <p>
