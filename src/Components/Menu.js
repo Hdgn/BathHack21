@@ -8,7 +8,7 @@ const Menu = (props) => {
         <div style={{backgroundColor: 'black'}}
         class="ui menu">
             <div class="right menu" >
-                <Link class="item" to="/Main" style={{color: 'white', fontWeight: 'bold'}}>Home</Link>
+                <Link class="item" to="/Main" style={{color: 'white', fontWeight: 'extra-bold'}}>Home</Link>
             </div>
             {props.children}
         </div>
