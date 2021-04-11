@@ -2,7 +2,7 @@ import React from 'react'
 import {Header, Grid, Button} from 'semantic-ui-react'
 
 
-const TimerTypesComponent = ({ pomodoro, shortBreak, timer }) => {
+const TimerTypesComponent = ({ pomodoro, longBreak, shortBreak, timer }) => {
   const activeTimer = (button) => {
     return (button === timer) ? 'timer-button active' : 'timer-button';
   }
@@ -11,7 +11,7 @@ const TimerTypesComponent = ({ pomodoro, shortBreak, timer }) => {
     <div className="timers">
       <div className="timer-types">
         <Button medium primary onClick={pomodoro} className={activeTimer("pomodoro")}>Pomodoro</Button>
-        <Button medium primary onCLick={shortBreak} className={activeTimer("shortBreak")}>Break</Button>
+        <Button medium primary onClick={shortBreak} className={activeTimer("shortBreak")}>Break</Button>
       </div>
     </div>
   )

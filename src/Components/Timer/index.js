@@ -158,7 +158,9 @@ const TimerComponent = (props) => {
         pomodoro();        
       } else if (pressedKeys.includes("Alt") && pressedKeys.includes("s") || pressedKeys.includes("Alt") && pressedKeys.includes("S")) {
         shortBreak();
-      } else if (pressedKeys.includes("Alt") && pressedKeys.includes("r") || pressedKeys.includes("Alt") && pressedKeys.includes("R")) {
+      } else if (pressedKeys.includes("Alt") && pressedKeys.includes("l") || pressedKeys.includes("Alt") && pressedKeys.includes("L")) {
+        shortBreak();
+      }else if (pressedKeys.includes("Alt") && pressedKeys.includes("r") || pressedKeys.includes("Alt") && pressedKeys.includes("R")) {
         reset();
       } 
       
