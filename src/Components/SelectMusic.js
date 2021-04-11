@@ -1,30 +1,40 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import { Checkbox } from 'semantic-ui-react'
 // import { Timer } from '../Timer';
 
 const SelectMusic = (props) => {
 
-    const handleSubmit = () => {
-        return
+    const [ pomodoro, setPomodoro ] = useState(false)
+    const [ eyeCare, setEyeCare ] = useState(false)
+
+
+
+    const handlePomoChange = () => {
+        setEyeCare(eyeCare => !eyeCare)
     }
 
-    const handleChange = () => {
+    const handleECChange = () => {
 
     }
 
+    const handleMusicChange = () => {
 
+    }
+
+    
     return (
         <div>
            
-            <form onSubmit={handleSubmit}>
+            <form>
                 <label> Music:
-                    <input type="input" defaultValue="Select Type" onChange={handleChange} />        
+                    <input type="input" defaultValue="Select Type" onChange={handleMusicChange} />        
                 </label>
                 <label> Pomodoro
-                    <input type="radio" onChange={handleChange} />        
+                    <Checkbox toggle onChange={handlePomoChange} />        
                 </label>
                 <label> Eye Care:
-                    <input type="radio" onChange={handleChange} />        
+                    <Checkbox toggle onChange={handleECChange} />        
                 </label>
             </form>
             <button>

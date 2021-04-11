@@ -32,7 +32,7 @@ const MusicMood = () => {
   const [playlist, setPlaylist] = useState({selectedPlaylist: '', listOfPlaylistFromAPI: []});
   const [tracks, setTracks] = useState({selectedTrack: '', listOfTracksFromAPI: []});
   const [trackDetail, setTrackDetail] = useState(null);
-  const [ trackuri, setTrackuri ] = useState("spotify:album:1TIUsv8qmYLpBEhvmBmyBk")
+  const [ trackuri, setTrackuri ] = useState("spotify:playlist:37i9dQZF1DWWQRwui0ExPn")
 
 
   useEffect(() => {
