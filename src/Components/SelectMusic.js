@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import { Checkbox } from 'semantic-ui-react'
+import { Checkbox, Container, Grid } from 'semantic-ui-react'
 // import { Timer } from '../Timer';
 import { Button } from 'semantic-ui-react';
 
