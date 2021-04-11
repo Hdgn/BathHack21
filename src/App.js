@@ -17,8 +17,9 @@ import {
 function App() {
 
   const [showButton, setShowButton] = useState(true)
+  const myStyle={backgroundColor: 'coral', height: '700px',};
   return (
-    <div className="App">
+    <div style={myStyle} className="App">
 
       <Router>
         <Menu/>

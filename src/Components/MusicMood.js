@@ -19,13 +19,7 @@ const MusicMood = () => {
   const view = 'list'; // or 'coverart'
   const theme = 'black'; // or 'white'
 
-  console.log('RENDERING APP.JS');
-
-  const data = [
-    {value: 1, name: 'A'},
-    {value: 2, name: 'B'},
-    {value: 3, name: 'C'},
-  ]; 
+  console.log('rendering');
 
   const [token, setToken] = useState('');  
   const [genres, setGenres] = useState({selectedGenre: '', listOfGenresFromAPI: []});
@@ -126,7 +120,7 @@ const MusicMood = () => {
           <Dropdown label="Genre :" options={genres.listOfGenresFromAPI} selectedValue={genres.selectedGenre} changed={genreChanged} />
           <Dropdown label="Playlist :" options={playlist.listOfPlaylistFromAPI} selectedValue={playlist.selectedPlaylist} changed={playlistChanged} />
           <div className="col-sm-6 row form-group px-0">
-            <button type='submit' className="btn btn-success col-sm-12">
+            <button style={{backgroundColor: 'black'}} type='submit' className="btn btn-success col-sm-12">
               Search
             </button>
           </div>
