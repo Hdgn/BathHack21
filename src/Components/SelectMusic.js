@@ -13,11 +13,11 @@ const SelectMusic = (props) => {
 
 
     const handlePomoChange = () => {
-        setEyeCare(eyeCare => !eyeCare)
+        setEyeCare(pomodoro => !pomodoro)
     }
 
     const handleECChange = () => {
-
+        setEyeCare(eyeCare => !eyeCare)
     }
 
     const handleMusicChange = () => {

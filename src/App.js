@@ -35,15 +35,12 @@ function App() {
             <MainButtons/>
           </Route>
 
-          <Route path="/SelectMusic">
-            <SelectMusic/>
-          </Route>
 
           <Route path="/PomodoroMusic">
             <PomodoroMusic/>
           </Route>
 
-          <Route path="/Music">
+          <Route path="/MusicMood">
             <MusicMood/>
           </Route>
         </Switch>
