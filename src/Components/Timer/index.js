@@ -15,7 +15,7 @@ const TimerComponent = (props) => {
 
   useEffect(() => {
     setSeconds(props.pomodoro*60)
-  }, [props.pomodoro])
+  }, [props.pomodoro, props.shortBreak])
 
   useEffect(() => {
     let interval = null;

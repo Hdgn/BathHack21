@@ -12,7 +12,7 @@ const Details = (props) => {
   }
 
   const onBreakChange = (value) => {
-    props.setBreak(value)
+    props.setBreak(Number(value))
   }
 
   const onSave = () => {
