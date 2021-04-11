@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Header } from 'semantic-ui-react'
+import { Header, Grid } from 'semantic-ui-react'
 import Timer from './Timer'
 import Details from './Modal/Details'
 
@@ -48,8 +48,14 @@ const PomodoroMusic = (props) => {
 
     return (
     <div>
+      <Grid verticalAlign='middle' column={1} centered>
+        <Grid.Row>
         <Timer {...timerProps}/>
+        </Grid.Row>
+        <Grid.Row>
         <Details {...modalProps} />
+        </Grid.Row>
+      </Grid>
     </div>
     )
 }

@@ -84,7 +84,7 @@ const Details = (props) => {
             <Form.Field label='Ringer Type' control='select'value={props.ringerType} onChange={e => props.setRingerType(e.target.value)}>
                 <option value='AlarmClock'>Alarm Clock</option>
                 <option value='DoorBell'>Door Bell</option>
-                <option value='80sAlarm'>80sAlarm</option>
+                <option value='EightiesAlarm'>80sAlarm</option>
                 <option value='ElevatorDing'>Elevator Ding</option>
                 <option value='WristwatchAlarm'>Wrist Watch Alarm</option>
             </Form.Field>
